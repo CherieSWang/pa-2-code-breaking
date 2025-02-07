@@ -125,29 +125,33 @@ By altering this top secret set of numbers, you will be able to create a message
 6.  Add 14 to every number.
 
 ```{r}
-
-ts6 <- top_secret ___________
-
+#| label: add-14
+# adding 14 to every number
+ts6 <- top_secret + 14
 ```
 
 7.  Multiply every number by 18, then subtract 257.
 
 ```{r}
-
-ts7 <- ts6___________
-
+#| label: multiply-subtract
+# multiply every number by 18, then subtract 257
+ts7 <- ts6*18 - 257
 ```
 
 8.  Use the `exp()` function to exponentiate every number.
 
 ```{r}
-ts8 <- ____(ts7)
+#| label: exponentiate
+# exponentiate every number
+ts8 <- exp(ts7)
 ```
 
 9.  Square every number.
 
 ```{r}
-ts9 <- 
+#| label: square-numbers
+# square everynumber
+ts9 <- ts8^2
 ```
 
 **Checkpoint:** Headquarters has informed you that at this stage of decoding, there should be 352 numbers in the secret message that are below 17. Write the code to verify that this is true for your `top_secret` object!
@@ -157,7 +161,7 @@ ts9 <-
 ```{r}
 # Write code to verify that there are 352 numbers with values **below** 17
 
-___(ts9 < 17)
+sum(ts9 < 17)
 
 ```
 
